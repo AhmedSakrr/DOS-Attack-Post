@@ -8,7 +8,7 @@ namespace DDoS_Post
         static void Main()
         {
             CancellationTokenSource cts = new CancellationTokenSource();
-            var slowThread = new Thread(new DdosPost("127.0.0.1", cts.Token).RunAttack);
+            var slowThread = new Thread(new DosPost("127.0.0.1", cts.Token).RunAttack);
             slowThread.Start();
 
             //Thread.Sleep(5000);

@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{7787A1FD-AF3D-4DCA-8ED8-8135B8E7B15A}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>DDoS_Post</RootNamespace>
-    <AssemblyName>DDoS-Post</AssemblyName>
+    <RootNamespace>DOS_Attack_Post</RootNamespace>
+    <AssemblyName>DOS-Attack-Post</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DdosPost.cs" />
+    <Compile Include="DosPost.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

