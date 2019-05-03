@@ -42,7 +42,6 @@ namespace DDoS_Post
                         byte[] buffer = Encoding.UTF8.GetBytes(post);
                         tcp.Client.Send(buffer, 0, buffer.Length, SocketFlags.None);
                         Console.WriteLine($"Packet has been sent [{DateTime.Now.ToLongTimeString()}]");
-                        tcp.Client.Dispose();
                     }
                     catch
                     {
