@@ -8,11 +8,11 @@ namespace DDoS_Post
         static void Main()
         {
             CancellationTokenSource cts = new CancellationTokenSource();
-            var slowThread = new Thread(new DosPost("127.0.0.1", cts.Token).RunAttack);
+            var slowThread = new Thread(new DosPost("https://www.google.com/", cts.Token).RunAttack);
             slowThread.Start();
 
-            //Thread.Sleep(5000);
-            //cts.Cancel();
+            Thread.Sleep(5000);
+            cts.Cancel();
         }
     }
 }
